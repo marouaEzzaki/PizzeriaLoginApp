@@ -23,6 +23,7 @@ public class DaoUsuario {
         user3.setDireccion("Calle 3 ");
         user3.setPassword("4321");
 
+        usuariosRegistrados = new Usuario[3];
         usuariosRegistrados[0] = user1;
         usuariosRegistrados[1] = user2;
         usuariosRegistrados[2] = user3;

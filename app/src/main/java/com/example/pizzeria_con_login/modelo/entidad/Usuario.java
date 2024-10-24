@@ -8,7 +8,6 @@ public class Usuario {
     String direccion;
     Pizza pizza;
 
-
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
@@ -19,5 +18,13 @@ public class Usuario {
 
     public void setDireccion(String direccion){
         this.direccion = direccion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
