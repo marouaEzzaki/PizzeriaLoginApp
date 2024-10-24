@@ -18,4 +18,17 @@ public class Pizza {
             case PEQUENO: precio = 5;
         }
     }
+
+    /***
+     * Método para añadir un ingrediente al arrayList y asi calcular el precio
+     * final de la pizza en la capa de negocio
+     * @param ingrediente
+     */
+    void addIngrediente(Ingrediente ingrediente){
+        ingredientes.add(ingrediente);
+    }
+
+
+
+
 }

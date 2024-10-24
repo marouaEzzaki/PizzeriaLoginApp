@@ -9,18 +9,15 @@ public class Usuario {
     Pizza pizza;
 
 
-    void setNombre(String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    void setPassword(String password){
+    public void setPassword(String password){
         this.password = password;
     }
 
-    void setDireccion(String direccion){
+    public void setDireccion(String direccion){
         this.direccion = direccion;
     }
-
-    
-
 }
