@@ -1,8 +1,9 @@
 package com.example.pizzeria_con_login.modelo.entidad;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Pizza {
+public class Pizza implements Serializable {
 
     PizzaSize tamanioPizza;
     ArrayList<Ingrediente> ingredientes;
@@ -27,8 +28,4 @@ public class Pizza {
     void addIngrediente(Ingrediente ingrediente){
         ingredientes.add(ingrediente);
     }
-
-
-
-
 }
