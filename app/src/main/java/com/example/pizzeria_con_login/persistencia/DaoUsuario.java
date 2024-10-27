@@ -11,16 +11,16 @@ public class DaoUsuario {
 
     public DaoUsuario(){
         user1.setNombre("Maroua");
-        user1.setDireccion("Calle 1");
+        user1.setDireccion("123 Elm Street, New York, US, Penthouse");
         user1.setPassword("1234");
 
         user2.setNombre("Nadia");
-        user2.setDireccion("Calle 2");
+        user2.setDireccion("456 Maple Avenue, Toronto, Canadá, Luxury Mansion in Yorkville");
         user2.setPassword("nadiaguapa");
 
 
         user3.setNombre("usuario");
-        user3.setDireccion("Calle 3 ");
+        user3.setDireccion("789 Oak Lane, Madrid 28001, España");
         user3.setPassword("4321");
 
         usuariosRegistrados = new Usuario[3];
@@ -29,6 +29,17 @@ public class DaoUsuario {
         usuariosRegistrados[2] = user3;
 
     }
+
+    public Usuario getUserByName(String name){
+        for(Usuario user : usuariosRegistrados){
+            if (user.getNombre().equalsIgnoreCase(name)){
+                return user;
+            }
+        }
+
+        return null;
+    }
+
 
     public Usuario[] getUsuariosRegistrados() {
         return usuariosRegistrados;
