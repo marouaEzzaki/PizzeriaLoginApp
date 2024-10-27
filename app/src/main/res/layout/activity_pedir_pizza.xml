@@ -10,29 +10,87 @@
     android:padding="16dp"
     tools:context=".PedirPizzaActivity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PIDA SU PIZZA : "
+        android:text="¡Bienvenid@ de nuevo "
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
-        android:textSize="32sp"
+        android:textSize="27sp"
         android:textColor="#FF8C00"
         android:textStyle="bold"
         android:layout_marginTop="23dp"
-        android:layout_marginBottom="20dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="27sp"
+        android:textColor="#FF6500"
+        android:textStyle="bold"
+        android:text=" "
+        android:layout_marginTop="23dp"
+        android:id="@+id/bienvenidaUsernmae"
+
+        android:shadowColor="#80FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+       />
+
+
+</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tu direccion de envio :  "
+            android:textAlignment="center"
+            android:textSize="27sp"
+            android:textColor="#FF8C00"
+            android:textStyle="bold"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="9dp"
+        android:id="@+id/userDatosEnvio"
         />
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="¡ELIGE TU PIZZA ! "
+        android:textAlignment="center"
+        android:textColor="#FF8C00"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="27sp"
         android:textColor="#FF8C00"
         android:textStyle="bold"
-        android:text="Elige tu tamaño de pizza : "
+        android:text="Tamaño de pizza : "
         />
 
     <RadioGroup
@@ -77,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:textSize="24sp"
+        android:textSize="27sp"
         android:textColor="#FF8C00"
         android:textStyle="bold"
         android:text="Elige ingredientes 2€ cada uno : "
@@ -178,7 +236,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="comprar ahora"
+        android:text="hacer pedido"
         android:id="@+id/btnComprar"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -188,28 +246,4 @@
         android:layout_marginBottom="20dp"
         />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TOTAL A PAGAR = "
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            />
-
-        <TextView
-            android:id="@+id/precioFinal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 </LinearLayout>
