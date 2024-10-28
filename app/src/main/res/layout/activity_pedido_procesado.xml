@@ -12,10 +12,11 @@
 
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="90dp"
         android:layout_marginBottom="20dp"
         android:text="¡PEDIDO PROCESADO CORRECTAMENTE! "
         android:textAlignment="center"
@@ -26,11 +27,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="18dp"
         android:layout_marginBottom="20dp"
         android:text="Resumen de su pedido :  "
         android:textColor="#FF8C00"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <TextView
@@ -44,5 +45,11 @@
         android:layout_marginBottom="9dp"
         />
 
+    <!--como mejora poner dos textview  más para reflejar el precio
+    algo como :
+        Una pizza de tamaño :
+        Cantidad de ingrediente/s :
+        Precio total a pagar :
+        -->
 
 </LinearLayout>

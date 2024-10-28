@@ -13,15 +13,14 @@ import com.example.pizzeria_con_login.modelo.entidad.Usuario;
 import com.example.pizzeria_con_login.negocio.GestorUsuario;
 import com.example.pizzeria_con_login.persistencia.DaoUsuario;
 
-public class LogInAcivity extends AppCompatActivity {
-
+public class LogInDatosIncorrectosActivity extends AppCompatActivity {
     public final static String K_USUARIO = "usuario";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_log_in_datos_incorrectos);
 
         GestorUsuario gu = new GestorUsuario();
         DaoUsuario dao = new DaoUsuario();
@@ -40,24 +39,20 @@ public class LogInAcivity extends AppCompatActivity {
 
             boolean esValidado = gu.validarUsuario(usuarioFromTheApp);
 
-            if (esValidado){
-                Log.i("LogInActivity", "Se ha validado correctamente el login del usuarioFromTheApp: ");
+            if (esValidado) {
+                Log.i("LogInActivity", "Se ha validado correctamente el login del usuarioFromTheApp.");
 
-                Intent intent = new Intent(LogInAcivity.this,PedirPizzaActivity.class);
+                Intent intent = new Intent(LogInDatosIncorrectosActivity.this, PedirPizzaActivity.class);
 
                 Usuario userValidated = dao.getUserByName(userName);
 
-                if (userValidated!=null){
-                    intent.putExtra(K_USUARIO,userValidated);
+                if (userValidated != null) {
+                    intent.putExtra(K_USUARIO, userValidated);
                     startActivity(intent);
                 }
-
-            }else{
-                Log.i("LogInActivity", "no se ha validado ");
-
-                Intent intent = new Intent(LogInAcivity.this, LogInDatosIncorrectosActivity.class);
-                startActivity(intent);
-
+            } else {
+                Log.i("LogInActivity", "Datos de usuario incorrectos.");
+                // Puedes añadir aquí una acción en caso de error de login.
             }
         });
     }
