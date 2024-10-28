@@ -23,11 +23,8 @@ public class LogInAcivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-
-
         GestorUsuario gu = new GestorUsuario();
         DaoUsuario dao = new DaoUsuario();
-
 
         EditText editTextUserName = findViewById(R.id.editTxtUser);
         EditText editTextPassword = findViewById(R.id.editTxtPassword);
@@ -48,15 +45,11 @@ public class LogInAcivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LogInAcivity.this,PedirPizzaActivity.class);
 
-
-                //creo que tengo que pasarle los datos del usuarioFromTheApp
                 Usuario userValidated = dao.getUserByName(userName);
 
                 if (userValidated!=null){
-
                     intent.putExtra(K_USUARIO,userValidated);
                     startActivity(intent);
-
                 }
 
             }else{

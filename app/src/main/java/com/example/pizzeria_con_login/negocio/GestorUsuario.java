@@ -6,9 +6,6 @@ import com.example.pizzeria_con_login.persistencia.DaoUsuario;
 public class GestorUsuario {
     final DaoUsuario daoUsuario = new DaoUsuario();
 
-
-
-
     /***
      * Valida si el usuario que intenta iniciar sesion es valido
      * @param usuario El usuario a  validar

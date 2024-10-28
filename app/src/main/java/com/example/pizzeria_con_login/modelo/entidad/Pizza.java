@@ -9,23 +9,40 @@ public class Pizza implements Serializable {
     ArrayList<Ingrediente> ingredientes;
     int precio;
 
-    public Pizza(){
-        ingredientes = new ArrayList<>();
+    public Pizza(PizzaSize tamanioPizza){
+        this.tamanioPizza = tamanioPizza;
+        this.ingredientes = new ArrayList<>();
+        this.precio = calcularPrecio();
+
     }
-    void setPrecio(){
-        switch (tamanioPizza){
-            case GRANDE: precio = 15;
-            case MEDIANO: precio = 10;
-            case PEQUENO: precio = 5;
+
+    private int calcularPrecio() {
+        switch (tamanioPizza) {
+            case GRANDE: return 15;
+            case MEDIANA: return 10;
+            case PEQUENA: return 5;
+            default: return 0;
         }
     }
 
-    /***
-     * Método para añadir un ingrediente al arrayList y asi calcular el precio
-     * final de la pizza en la capa de negocio
-     * @param ingrediente
-     */
-    void addIngrediente(Ingrediente ingrediente){
-        ingredientes.add(ingrediente);
+
+    public PizzaSize getTamanioPizza() {
+        return tamanioPizza;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setTamanioPizza(PizzaSize tamanioPizza) {
+        this.tamanioPizza = tamanioPizza;
+    }
+
+    public ArrayList<Ingrediente> getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 }

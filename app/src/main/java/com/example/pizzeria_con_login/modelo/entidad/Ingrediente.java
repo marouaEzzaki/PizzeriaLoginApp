@@ -1,13 +1,11 @@
 package com.example.pizzeria_con_login.modelo.entidad;
 
-public class Ingrediente {
+import java.io.Serializable;
 
-    final int PRECIO_INGREDIENTE = 2;
+public class Ingrediente implements Serializable {
     String nombre;
 
-
-    void setNombre(String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
-
 }

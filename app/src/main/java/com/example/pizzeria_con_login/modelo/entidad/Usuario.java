@@ -1,7 +1,9 @@
 package com.example.pizzeria_con_login.modelo.entidad;
 
+import java.io.Serializable;
+
 //Los usuarios tendrán un nombre, un password, una dirección y una pizza asocidada.
-public class Usuario {
+public class Usuario implements Serializable {
 
     String nombre;
     String password;
@@ -27,4 +29,9 @@ public class Usuario {
     public String getPassword() {
         return password;
     }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
 }
