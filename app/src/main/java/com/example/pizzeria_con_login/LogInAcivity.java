@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,8 +56,22 @@ public class LogInAcivity extends AppCompatActivity {
             }else{
                 Log.i("LogInActivity", "no se ha validado ");
 
+                //LLAMAR OTRA ACTIVITY QUE MUESTRA EL MENSAJE DE ERROR Y PERMITE
+                //AL USUARIO VOLVER A INTRODUCIR LOS DATOS
+
                 Intent intent = new Intent(LogInAcivity.this, LogInDatosIncorrectosActivity.class);
                 startActivity(intent);
+
+                //EN VEZ DE LLAMAR A OTRA ACTIVITY , MUETSRAS MENSAJES DE ERROR :
+
+                /*
+                TextView textViewUserMsgIncorrecto = findViewById(R.id.userPswdIncorrecto);
+                textViewUserMsgIncorrecto.setText("USUARIO O PASSWORD INCORRECTOS");
+
+                TextView textViewIntenteloDeNuevo = findViewById(R.id.IntenteloDeNuevoMsg);
+                textViewIntenteloDeNuevo.setText("Por favor, inténtelo de nuevo");
+
+                 */
 
             }
         });
