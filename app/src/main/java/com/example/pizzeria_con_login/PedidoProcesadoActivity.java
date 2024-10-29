@@ -20,14 +20,20 @@ public class PedidoProcesadoActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_pedido_procesado);
 
-        TextView textView = findViewById(R.id.pedidoProcesado);
+        TextView textViewTamanio = findViewById(R.id.pedidoProcesado);
+
+        TextView textViewNumIngredientes = findViewById(R.id.numIngredientes);
+
+        TextView textViewTotalPagar  = findViewById(R.id.precioTotalPagar);
 
         Pizza pizza = (Pizza) getIntent().getSerializableExtra(PedirPizzaActivity.K_PIZZA);
 
-
         String tamanioPizza = pizza.getTamanioPizza().toString();
+        
+        textViewTamanio.setText(tamanioPizza);
+        textViewNumIngredientes.setText( " "+pizza.getIngredientes().size());
+        textViewTotalPagar.setText(pizza.getPrecio() + " €");
 
-        textView.setText("Una pizza " + tamanioPizza + " más los " + pizza.getIngredientes().size() + " ingredientes" +
-                " el total a pagar es de : " + pizza.getPrecio() + " €");
+
     }
 }

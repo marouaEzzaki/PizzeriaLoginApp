@@ -16,7 +16,7 @@ public class DaoUsuario {
 
         user2.setNombre("Nadia");
         user2.setDireccion("456 Maple Avenue, Toronto, Canadá, Luxury Mansion in Yorkville");
-        user2.setPassword("nadiaguapa");
+        user2.setPassword("nadia123");
 
 
         user3.setNombre("usuario");

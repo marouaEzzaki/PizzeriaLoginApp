@@ -52,7 +52,7 @@ public class LogInDatosIncorrectosActivity extends AppCompatActivity {
                 }
             } else {
                 Log.i("LogInActivity", "Datos de usuario incorrectos.");
-                // Puedes añadir aquí una acción en caso de error de login.
+                
             }
         });
     }

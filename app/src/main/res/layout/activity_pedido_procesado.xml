@@ -21,35 +21,100 @@
         android:text="¡PEDIDO PROCESADO CORRECTAMENTE! "
         android:textAlignment="center"
         android:textColor="#FF8C00"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="28dp"
         android:layout_marginBottom="20dp"
         android:text="Resumen de su pedido :  "
         android:textColor="#FF8C00"
-        android:textSize="28sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
-    <TextView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Una pizza de tamaño : "
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pedidoProcesado"
+            android:textColor="#FF8C00"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="9dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Ingredientes seleccionados :"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/numIngredientes"
+            android:textColor="#FF8C00"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/pedidoProcesado"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="14dp"
         android:layout_marginBottom="9dp"
-        />
+        >
 
-    <!--como mejora poner dos textview  más para reflejar el precio
-    algo como :
-        Una pizza de tamaño :
-        Cantidad de ingrediente/s :
-        Precio total a pagar :
-        -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="TOTAL A PAGAR : "
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/precioTotalPagar"
+            android:textColor="#FF8C00"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>

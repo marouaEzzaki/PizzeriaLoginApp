@@ -22,8 +22,13 @@ public class GestorPizza {
     DaoUsuario daoUsuario = new DaoUsuario();
 
 
+    /***
+     * Este método calcula parte del precio de la pizza añadiendo
+     * en funcion de los ingredientes que el usuario haya elegido
+     * @param pizza
+     * @return
+     */
     public int calcularPrecioPizza(Pizza pizza){
-
         return  pizza.getIngredientes().size()*2;
 
     }
