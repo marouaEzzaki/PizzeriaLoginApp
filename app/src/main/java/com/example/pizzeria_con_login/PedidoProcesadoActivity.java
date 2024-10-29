@@ -29,7 +29,7 @@ public class PedidoProcesadoActivity extends AppCompatActivity {
         Pizza pizza = (Pizza) getIntent().getSerializableExtra(PedirPizzaActivity.K_PIZZA);
 
         String tamanioPizza = pizza.getTamanioPizza().toString();
-        
+
         textViewTamanio.setText(tamanioPizza);
         textViewNumIngredientes.setText( " "+pizza.getIngredientes().size());
         textViewTotalPagar.setText(pizza.getPrecio() + " €");

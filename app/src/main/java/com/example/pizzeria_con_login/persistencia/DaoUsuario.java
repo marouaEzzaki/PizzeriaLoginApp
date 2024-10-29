@@ -30,6 +30,11 @@ public class DaoUsuario {
 
     }
 
+    /***
+     * Este método se encarga de buscar un usuario por su nombre
+     * @param name el nombre a buscar en nuestra estructura de datos
+     * @return si encuentra hay una coincidencia devuelve el usuario, en caso contrario, null
+     */
     public Usuario getUserByName(String name){
         for(Usuario user : usuariosRegistrados){
             if (user.getNombre().equalsIgnoreCase(name)){
@@ -41,6 +46,10 @@ public class DaoUsuario {
     }
 
 
+    /***
+     * Devuelve todos los usuarios registrados en nuestra aplicacion.
+     * @return una lista que contiene todos los usuarios registrados
+     */
     public Usuario[] getUsuariosRegistrados() {
         return usuariosRegistrados;
     }
